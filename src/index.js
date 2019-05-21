@@ -9,7 +9,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const authToken = localStorage.getItem('authToken');
 const client = new ApolloClient({
-  uri: 'http://localhost:3000/graphql',
+  uri: 'https://channelmebackend.herokuapp.com/graphql',
   cache: new InMemoryCache(),
   headers: {authorization:authToken? `Bearer ${authToken}` :null}
   });
